@@ -1,0 +1,184 @@
+<div class="tradeblotter-table-container">
+  <div class="table_heading">
+    <button kendoButton themeColor="secondary">
+      <span class="table_heading-icon material-symbols-outlined"> flag </span>
+      ({{ 0 }})
+    </button>
+    <h1>GA Securities</h1>
+  </div>
+  <kendo-grid
+    [kendoGridBinding]="data"
+    class="table_grid"
+    filterable="menu"
+    [sortable]="true"
+    [pageable]="true"
+    [pageSize]="5"
+  >
+    <kendo-grid-column
+      field="Approve"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [width]="200"
+      [filterable]="false"
+    >
+      <ng-template
+        kendoGridHeaderTemplate
+        let-column
+        let-columnIndex="columnIndex"
+      >
+        <button kendoButton themeColor="secondary">Approve All</button>
+      </ng-template>
+
+      <ng-template kendoGridCellTemplate>
+        <div class="flex">
+          <button kendoButton themeColor="secondary">
+            <span class="k-icon k-i-edit k-icon-sm"></span>
+          </button>
+          <button kendoButton themeColor="secondary">Flag</button>
+          <button kendoButton themeColor="secondary">Approve</button>
+        </div>
+      </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column
+      field="Days"
+      title="Days"
+      [width]="75"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="TradeDate"
+      title="Trade Date"
+      [width]="125"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="TranType"
+      title="Tran Type"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="MngrCode"
+      title="Mngr. Code"
+      [width]="125"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Ticker"
+      title="Ticker"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      headerClass="tableHeader"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Name"
+      title="Name"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      headerClass="tableHeader"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="CUSIP"
+      title="CUSIP"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="MaturityDate"
+      title="Maturity Date"
+      [width]="115"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Yield"
+      title="Yield"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="CUR"
+      title="CUR"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Portfolio"
+      title="Portfolio"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Quantity"
+      title="Quantity"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Trader"
+      title="Trader"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Strategy"
+      title="Strategy"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="DUSCode"
+      title="DUS Code"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Reason"
+      title="Reason"
+      [width]="100"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="FlagContent"
+      title="Flag Content"
+      [width]="200"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="Note"
+      title="Note"
+      [width]="200"
+      [headerStyle]="{ 'background-color': 'var(--color-orange)' }"
+      [headerClass]="'tableHeader'"
+      [filterable]="false"
+    ></kendo-grid-column>
+  </kendo-grid>
+</div>

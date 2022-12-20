@@ -1,0 +1,48 @@
+.tradeblotter-table-container {
+  width: 100vw;
+  height: 100%;
+  overflow-x: scroll;
+  padding: 0 1.5rem;
+}
+
+.table_grid {
+  width: 100%;
+}
+
+.tableHeader {
+  color: white;
+
+  .k-icon {
+    color: white;
+  }
+}
+
+.table_heading {
+  padding: 1rem 0;
+  display: flex;
+  border-bottom: 1px solid black;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .table_heading-icon {
+      transform: scale(0.8);
+    }
+  }
+
+  h1 {
+    color: var(--color-orange);
+    margin-left: 1rem;
+  }
+}
+
+.table_grid {
+  overflow-x: auto;
+  overflow-y: none;
+}
+
+.grid-btn-style {
+  background-color: rgb(80, 80, 80);
+}
